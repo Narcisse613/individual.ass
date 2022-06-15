@@ -1,1 +1,79 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>my pos app</title>
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" 
+integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    
+    
+    <style>
+        
+    .col {
+            background-color: rgb(52, 240, 27);
+            height: 85px;
+            text-align: center;
+            font-size:larger;
+            font-family: Arial;
+            width: 700PX;
+            padding-left: 10px;
+            margin: 10px;
+            text-align: center;
+        }
+        
+        .container-fluid{
+            border: 10px;
+            margin: 10px;
+            background-color: rgb(129, 127, 255);
+            padding-left: 10px;
+            height: 300PX;
+            width: 700PX;
+            text-align: center;
+            
+            
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            
+        <div class="col"> WELCOME TO POS</div>
+            
+        
+    </div>
+    <DIv class="content">
+        <back></back>
+        {% for items in posts %}
+       
+        
+            <div class="card border-dark mb-3" style="max-width: 40rem;">
+                <div class="card-header"> {{ items.title}}</div>
+                <div class="card-body"></div>
+                <h3 class="card-text"> {{items.title}}</h3>
+                <div class="card-body">
+                <h6 class="card-text"> {{items.desc}}</h6>
+                <h5 class="card-text"> {{items.Technology}}</h5>
+                <h6 class="card-text"> {{items.author}}</h6>
+                <p class="card-text">{{items.body_text|truncatewords:15}}</p>
+                <h6 class="card-title">{{items.pub_date}}</h6>
+                           
+               <a href="details.html"class="btn btn-outline-secondary"> <button type="button" class="btn btn-danger">Read more...............</button>
+                      
+            </a>
+            
+       </div>
+       {% endfor %}
+    
+    </DIv>
+    
+    
+   <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+ integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script> 
+</body>
+</html>
